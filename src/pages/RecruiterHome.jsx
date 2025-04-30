@@ -10,7 +10,7 @@ const RecruiterHome = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/api/v1/jobs", {
+        const response = await axios.get("https://job-backend-omega.vercel.app/api/v1/jobs", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setJobs(response.data);
