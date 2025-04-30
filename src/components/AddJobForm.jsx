@@ -26,7 +26,7 @@ const AddJobForm = ({ onJobAdded }) => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/api/v1/getallcompanies");
+        const response = await axios.get("https://job-backend-omega.vercel.app/api/v1/getallcompanies");
         setCompanies(response.data?.companies || []);
       } catch (error) {
         console.error("Error fetching companies", error);
@@ -46,7 +46,7 @@ const AddJobForm = ({ onJobAdded }) => {
     try {
       console.log("Sending job data:", jobData);
 
-      const response = await axios.post("http://localhost:4001/api/v1/addjob", jobData, {
+      const response = await axios.post("https://job-backend-omega.vercel.app/api/v1/addjob", jobData, {
         headers: {
           Authorization: `Bearer ${token}`,
           id: recruiterId,
