@@ -10,7 +10,7 @@ const AdminJobCart = ({ data }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await axios.delete("https://job-backend-omega.vercel.app//api/v1/deletejob", {
+      const response = await axios.delete("https://job-backend-omega.vercel.app/api/v1/deletejob", {
         headers: {
           Authorization: `Bearer ${token}`,
           jobid: data._id,
@@ -43,7 +43,7 @@ const AdminJobCart = ({ data }) => {
   
     try {
       const response = await axios.put(
-        "http://localhost:4001/api/v1/updatejob",
+        "https://job-backend-omega.vercel.app/api/v1/updatejob",
         {
           title: updatedTitle,
           desc: updatedDesc,
