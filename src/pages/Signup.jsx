@@ -33,7 +33,7 @@ const Signup = () => {
     }
   
     try {
-      const response = await axios.post("http://localhost:4001/api/v1/signup", values, {
+      const response = await axios.post("https://job-backend-omega.vercel.app/api/v1/signup", values, {
         headers: {
           "Content-Type": "application/json",  
         },
