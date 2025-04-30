@@ -9,7 +9,7 @@ function Browser() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/api/v1/alljobs");
+        const response = await axios.get("https://job-backend-omega.vercel.app/api/v1/alljobs");
         console.log(response);
         setJobs(response.data.data);
       } catch (e) {
