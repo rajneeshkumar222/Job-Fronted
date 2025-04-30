@@ -18,7 +18,7 @@ const ViewJobDetailed = () => {
                     return;
                 }
                 console.log("Fetching Job ID:", jobid);
-                const response = await axios.get(`http://localhost:4001/api/v1/getjob/${jobid}`);
+                const response = await axios.get(`https://job-backend-omega.vercel.app/api/v1/getjob/${jobid}`);
                 console.log("Job Details:", response.data);
                 setJob(response.data.job);
             } catch (e) {
